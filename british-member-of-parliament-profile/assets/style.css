@@ -1,0 +1,128 @@
+.member-of-parliament-profile__wrapper {
+	display: flex;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.member-of-parliament-profile__image {
+	border-radius: 99%;
+	border: 5px solid #036031;
+	margin-right: 24px;
+	pointer-events: none;
+	width: 18%;
+	box-shadow: 1px 2px #c3bebe;
+}
+
+#member-of-parliament-profile__container {
+	margin: auto 0;
+}
+
+.member-of-parliament-profile__container {
+	margin: auto;
+}
+
+.member-of-parliament-profile__name {
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.member-of-parliament-profile__date-elected,
+.member-of-parliament-profile__role {
+	font-weight: 300;
+}
+
+.member-of-parliament-profile__date-elected {
+	margin-bottom: 3px;
+	font-size: 12px;
+	text-align: right;
+}
+
+.member-of-parliament-profile__contact-information {
+	margin-top: 12px; 
+}
+
+.member-of-parliament-profile-party-wrapper {
+	display: flex;
+}
+
+.member-of-parliament-profile__constituency:before {
+	content: ' - ';
+	margin-left: 4px; 
+}
+
+.member-of-parliament-profile__party:after {
+	/* Do not translate: official title. */
+	content: '  MP';
+}
+
+.member-of-parliament-profile__email {
+	text-transform: lowercase;
+}
+
+.member-of-parliament-profile__phone {
+	display: block; 
+	margin-top: -8px;
+}
+
+.member-of-parliament-profile__email:before {
+	content: "\2709";
+	font-size: 24px;
+	position: relative; 
+	top: 3px; 
+	margin-right: 4px;
+}
+
+.member-of-parliament-profile__phone:before {
+	content: "\260F";
+	margin-right: 2px; 
+	font-size: 20px; 
+	position: relative; 
+	top: 2px; 
+	right: 2px;
+	
+}
+
+.member-of-parliament__not-found {
+	display: none;
+}
+
+.member-of-parliament-profile__wrapperno-constituency-found .member-of-parliament__not-found {
+	display: block;
+}
+
+/* Party colours for those in the Commons */
+.member-of-parliament-profile__wrapper.labour-party .member-of-parliament-profile__image {
+	border-color: #DC241F;
+}
+
+.member-of-parliament-profile__wrapper.conservative-party .member-of-parliament-profile__image {
+	border-color: #0087DC;
+}
+
+.member-of-parliament-profile__wrapper.liberal-democrat-party .member-of-parliament-profile__image {
+	border-color: #FAA61A;
+}
+
+.member-of-parliament-profile__wrapper.scottish-national-party-party .member-of-parliament-profile__image {
+	border-color: #FDF38E;
+}
+
+.member-of-parliament-profile__wrapper.green-party-party .member-of-parliament-profile__image {
+	border-color: #6AB023;
+}
+
+.member-of-parliament-profile__wrapper.plaid-cymru-party .member-of-parliament-profile__image {
+	border-color: #008142;
+}
+
+.member-of-parliament-profile__wrapper.democratic-unionist-party-party .member-of-parliament-profile__image {
+	border-color: #D46A4C;
+}
+
+.member-of-parliament-profile__wrapper.sinn-féin-party {
+	border-color: #326760;
+}
+
+.member-of-parliament-profile__wrapper.speaker-party .member-of-parliament-profile__party {
+	display: none;
+}
