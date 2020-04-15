@@ -126,3 +126,21 @@
 .member-of-parliament-profile__wrapper.speaker-party .member-of-parliament-profile__party {
 	display: none;
 }
+
+@media only screen and (max-width: 520px) {
+	.member-of-parliament-profile__wrapper {
+		flex-direction: column;
+	}
+	
+	.member-of-parliament-profile__image {
+		margin: auto;
+		height: 160px;
+		text-align: center; 
+		width: auto; 
+	}
+	
+	.member-of-parliament-profile__date-elected {
+		text-align: center; 
+		margin-top: 3px; 
+	}
+}

@@ -17,7 +17,7 @@
  * Text Domain:       member-of-parliament-profile
  */
 
-function member-of-parliament-profile($atts, $content = null)
+function memberOfParliamentProfile($atts, $content = null)
 {
     $a                  = shortcode_atts(array(
         'constituency' => 'notice'
@@ -39,11 +39,11 @@ content: "' . __('Elected on ', 'member-of-parliament-profile') . '";
 }
 </style>';
 }
-add_shortcode('profilemp', 'member-of-parliament-profile');
-function member-of-parliament-profile_enqueue_scripts()
+add_shortcode('profilemp', 'memberOfParliamentProfile');
+function memberOfParliamentEnqueueScripts()
 {
     wp_enqueue_script('member-of-parliament-profile_data', plugin_dir_url(__FILE__) . '/assets/query-mp.js');
     wp_enqueue_style( 'member-of-parliament-profile_styles', plugin_dir_url(__FILE__) . '/assets/style.css');
 }
 // Necessary to load first, so must use wp_head
-add_action('wp_head', 'member-of-parliament-profile_enqueue_scripts');
+add_action('wp_head', 'memberOfParliamentEnqueueScripts');
