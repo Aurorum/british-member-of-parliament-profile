@@ -22,13 +22,13 @@ function memberOfParliamentProfileQueryData() {
 }
 
 function memberOfParliamentProfileBuildData( xml ) {
-	var x, i, mpProfileAddress, xmlDoc, dog, table;
+	var x, i, mpProfileAddress, xmlDoc, address;
 	xmlDoc = xml.responseXML;
 	memberofparliamentbuildprofile =
 		"<div id='member-of-parliament-profile-data' className='member-of-parliament-profile__data'>";
 	x = xmlDoc.getElementsByTagName( 'Member' );
 	mpProfileAddress = xmlDoc.getElementsByTagName( 'Addresses' );
-	dog = xmlDoc.getElementsByTagName( 'Address' );
+	address = xmlDoc.getElementsByTagName( 'Address' );
 	for ( i = 0; i < x.length; i++ ) {
 		let container = document.getElementById( 'member-of-parliament-profile' );
 		container.classList.add(
@@ -94,7 +94,8 @@ function memberOfParliamentProfileBuildData( xml ) {
 			x[ i ].getElementsByTagName( 'DisplayAs' )[ 0 ].childNodes[ 0 ].nodeValue +
 			mpProfileMinisterialRole +
 			"</div><div class='member-of-parliament-profile-party-wrapper'><div class='member-of-parliament-profile__party'>" +
-			x[ i ].getElementsByTagName( 'Party' )[ 0 ].childNodes[ 0 ].nodeValue +
+			// Do not translate: official title.
+			x[ i ].getElementsByTagName( 'Party' )[ 0 ].childNodes[ 0 ].nodeValue + ' MP -' +
 			"</div><div class='member-of-parliament-profile__constituency'>" +
 			x[ i ].getElementsByTagName( 'MemberFrom' )[ 0 ].childNodes[ 0 ].nodeValue +
 			'</div></div></div><div class="member-of-parliament-profile__contact-information">' +

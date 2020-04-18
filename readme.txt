@@ -18,6 +18,8 @@ This plugin provides a way to query Parliament's database and return a profile o
 * Providing basic information on an MP relevant to your content or news story
 * Raising awareness about who to consult with regarding local issues 
 
+This plugin relies on the data offered by the third party service of [UK Parliament Data](http://www.data.parliament.uk/) to return the information and portrait in the profile based on a constituency. This data is licensed under the [Open Parliament Licence](https://www.parliament.uk/site-information/copyright/open-parliament-licence/) - there are no additional Privacy Policies from UK Parliament Data relating to this plugin.
+
 = Instructions =
 
 In order to render a profile, use the following shortcode structure: <strong>[profilemp constituency="Leeds Central"]</strong>

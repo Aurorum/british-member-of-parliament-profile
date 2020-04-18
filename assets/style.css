@@ -7,9 +7,9 @@
 .member-of-parliament-profile__image {
 	border-radius: 99%;
 	border: 5px solid #036031;
-	margin-right: 24px;
+	margin: auto 24px;
 	pointer-events: none;
-	width: 18%;
+	max-height: 150px;
 	box-shadow: 1px 2px #c3bebe;
 }
 
@@ -45,14 +45,8 @@
 	display: flex;
 }
 
-.member-of-parliament-profile__constituency:before {
-	content: ' - ';
+.member-of-parliament-profile__constituency {
 	margin-left: 4px; 
-}
-
-.member-of-parliament-profile__party:after {
-	/* Do not translate: official title. */
-	content: '  MP';
 }
 
 .member-of-parliament-profile__email {
@@ -82,11 +76,12 @@
 	
 }
 
-.member-of-parliament__not-found {
+.member-of-parliament__not-found,
+.no-constituency-found .member-of-parliament-profile__image {
 	display: none;
 }
 
-.member-of-parliament-profile__wrapperno-constituency-found .member-of-parliament__not-found {
+.member-of-parliament-profile__wrapper.no-constituency-found .member-of-parliament__not-found {
 	display: block;
 }
 
