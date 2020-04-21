@@ -42,6 +42,11 @@ After every by-election or election! The information is provided directly from P
 
 This was just a fun project to create during the coronavirus lockdown, but if there's any issues, I'm happy to help - feel free to contact me. 
 
+== Screenshots ==
+
+1. An example usage of the profile in action - the specific design of the profile depends on the styles contained within your theme.
+2. Add a profile through the Shortcode block in the Block Editor 
+
 == Changelog ==
 
 = 1.0 =
