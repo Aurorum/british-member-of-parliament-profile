@@ -4,7 +4,7 @@
 	margin-bottom: 20px;
 }
 
-.member-of-parliament-profile__image {
+.member-of-parliament-profile__portrait {
 	border-radius: 99%;
 	border: 5px solid #036031;
 	margin: auto 24px;
@@ -38,15 +38,16 @@
 }
 
 .member-of-parliament-profile__contact-information {
-	margin-top: 12px; 
+	margin-top: 12px;
 }
 
-.member-of-parliament-profile-party-wrapper {
-	display: flex;
+.member-of-parliament-profile__contact-information a {
+	text-decoration: none;
 }
 
-.member-of-parliament-profile__constituency {
-	margin-left: 4px; 
+.member-of-parliament-profile__contact-information a:hover,
+.entry-content .member-of-parliament-profile__contact-information a:hover {
+	text-decoration: underline;
 }
 
 .member-of-parliament-profile__email {
@@ -54,31 +55,41 @@
 }
 
 .member-of-parliament-profile__phone {
-	display: block; 
+	display: block;
 	margin-top: -8px;
 }
 
 .member-of-parliament-profile__email:before {
-	content: "\2709";
+	content: '\2709';
 	font-size: 24px;
-	position: relative; 
-	top: 3px; 
+	position: relative;
+	top: 3px;
 	margin-right: 4px;
 }
 
 .member-of-parliament-profile__phone:before {
-	content: "\260F";
-	margin-right: 2px; 
-	font-size: 20px; 
-	position: relative; 
-	top: 2px; 
+	content: '\260F';
+	margin-right: 2px;
+	font-size: 20px;
+	position: relative;
+	top: 2px;
 	right: 2px;
-	
+}
+
+.member-of-parliament-profile__container p {
+	margin-bottom: 3px;
 }
 
 .member-of-parliament__not-found,
-.no-constituency-found .member-of-parliament-profile__image {
+.no-constituency-found .member-of-parliament-profile__portrait,
+.no-constituency-found .member-of-parliament-profile__container {
 	display: none;
+}
+
+.member-of-parliament-profile__wrapper.is-loading .member-of-parliament-profile__portrait {
+	max-height: 144px;
+	background: #a9a7a6;
+	border: 0;
 }
 
 .member-of-parliament-profile__wrapper.no-constituency-found .member-of-parliament__not-found {
@@ -86,56 +97,59 @@
 }
 
 /* Party colours for those in the Commons */
-.member-of-parliament-profile__wrapper.labour-party .member-of-parliament-profile__image {
-	border-color: #DC241F;
+.member-of-parliament-profile__wrapper.labour-party .member-of-parliament-profile__portrait {
+	border-color: #dc241f;
 }
 
-.member-of-parliament-profile__wrapper.conservative-party .member-of-parliament-profile__image {
-	border-color: #0087DC;
+.member-of-parliament-profile__wrapper.conservative-party .member-of-parliament-profile__portrait {
+	border-color: #0087dc;
 }
 
-.member-of-parliament-profile__wrapper.liberal-democrat-party .member-of-parliament-profile__image {
-	border-color: #FAA61A;
+.member-of-parliament-profile__wrapper.liberal-democrat-party
+	.member-of-parliament-profile__portrait {
+	border-color: #faa61a;
 }
 
-.member-of-parliament-profile__wrapper.scottish-national-party-party .member-of-parliament-profile__image {
-	border-color: #FDF38E;
+.member-of-parliament-profile__wrapper.scottish-national-party-party
+	.member-of-parliament-profile__portrait {
+	border-color: #fdf38e;
 }
 
-.member-of-parliament-profile__wrapper.green-party-party .member-of-parliament-profile__image {
-	border-color: #6AB023;
+.member-of-parliament-profile__wrapper.green-party-party .member-of-parliament-profile__portrait {
+	border-color: #6ab023;
 }
 
-.member-of-parliament-profile__wrapper.plaid-cymru-party .member-of-parliament-profile__image {
+.member-of-parliament-profile__wrapper.plaid-cymru-party .member-of-parliament-profile__portrait {
 	border-color: #008142;
 }
 
-.member-of-parliament-profile__wrapper.democratic-unionist-party-party .member-of-parliament-profile__image {
-	border-color: #D46A4C;
+.member-of-parliament-profile__wrapper.democratic-unionist-party-party
+	.member-of-parliament-profile__portrait {
+	border-color: #d46a4c;
 }
 
 .member-of-parliament-profile__wrapper.sinn-féin-party {
 	border-color: #326760;
 }
 
-.member-of-parliament-profile__wrapper.speaker-party .member-of-parliament-profile__party {
+.member-of-parliament-profile__wrapper.speaker-party .member-of-parliament-profile__details {
 	display: none;
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and ( max-width: 520px ) {
 	.member-of-parliament-profile__wrapper {
 		flex-direction: column;
 	}
-	
-	.member-of-parliament-profile__image {
+
+	.member-of-parliament-profile__portrait {
 		margin: auto;
 		height: 160px;
-		text-align: center; 
-		width: auto; 
+		text-align: center;
+		width: auto;
 	}
-	
+
 	.member-of-parliament-profile__date-elected {
-		text-align: center; 
-		margin-top: 3px; 
+		text-align: center;
+		margin-top: 3px;
 	}
 }
